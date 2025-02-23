@@ -1,0 +1,58 @@
+<view class="nav-bar">
+  <view class="nav-left">
+  </view>
+  <view class="nav-right">
+    <image class="nav-icon" src="/images/refresh.png" mode="aspectFit"></image>
+    <navigator class="nav-icon" url="/pages/index/index" open-type="switchTab">
+      <image src="/images/close.png" mode="aspectFit" style="width: 100%; height: 100%;"></image>
+    </navigator>
+  </view>
+</view>
+
+<view class="container">
+  <scroll-view class="chat-area" scroll-y>
+    <view class="ai-intro">
+      <image class="ai-avatar" src="/images/ai-avatar.png" mode="aspectFit"></image>
+      <text class="ai-hint">你可以这样问我...</text>
+    </view>
+
+    <view class="category-title">
+      <image src="/images/titleicon.png" mode="aspectFit"></image>
+      <text>销售助理</text>
+    </view>
+    <view class="message" bindtap="handleQuestionTap" data-question="生成国际物流人专属的朋友圈文案">
+      <text class="message-title">生成国际物流人专属的朋友圈文案</text>
+      <text class="message-arrow">></text>
+    </view>
+    <view class="message" bindtap="handleQuestionTap" data-question="查询Shanghai到Bangkok的运价">
+      <text class="message-title">查询Shanghai到Bangkok的运价</text>
+      <text class="message-arrow">></text>
+    </view>
+
+    <view class="category-title">
+      <image src="/images/titleicon.png" mode="aspectFit"></image>
+      <text>Cargoware操作</text>
+    </view>
+    <view class="message" bindtap="handleQuestionTap" data-question="复制订单SHSE12345678">
+      <text class="message-title">复制订单SHSE12345678</text>
+      <text class="message-arrow">></text>
+    </view>
+    <view class="message" bindtap="handleQuestionTap" data-question="扫描识别名片生成客户资料">
+      <text class="message-title">扫描识别名片生成客户资料</text>
+      <text class="message-arrow">></text>
+    </view>
+  </scroll-view>
+
+  <view class="input-area">
+    <view class="input-box">
+      <input class="message-input" 
+             type="text" 
+             placeholder="有什么想问我的呢？"
+             confirm-type="send"
+             bindconfirm="sendMessage" />
+      <view class="send-button">
+        <image src="/images/send.png" mode="aspectFit"></image>
+      </view>
+    </view>
+  </view>
+</view> 

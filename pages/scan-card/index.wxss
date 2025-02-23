@@ -1,0 +1,226 @@
+/* pages/scan-card/index.wxss */
+page {
+  background: #f7f7f7;
+}
+
+.card-container {
+  padding: calc(24rpx + env(safe-area-inset-top)) 24rpx 24rpx;
+}
+
+/* 名片主体样式 */
+.card-main {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin-bottom: 24rpx;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32rpx;
+}
+
+.name {
+  font-size: 40rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+}
+
+.title {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+}
+
+.company {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;
+}
+
+.info-item image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.info-item text {
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* 操作按钮区域 */
+.action-area {
+  margin-bottom: 24rpx;
+}
+
+.action-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24rpx;
+}
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.action-item image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.action-item text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.share-button {
+  width: 100%;
+  height: 88rpx;
+  line-height: 88rpx;
+  text-align: center;
+  background: linear-gradient(90deg, #1890ff 0%, #0060e5 100%);
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 44rpx;
+  border: none;
+}
+
+/* 底部功能区 */
+.bottom-tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  padding: 24rpx;
+  border-radius: 16rpx;
+  margin-bottom: 24rpx;
+}
+
+.tab-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.tab-item image {
+  width: 48rpx;
+  height: 48rpx;
+}
+
+.tab-item text {
+  font-size: 24rpx;
+  color: #666;
+}
+
+/* 名片数据统计 */
+.card-stats {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+  margin-bottom: 24rpx;
+}
+
+.stats-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.stats-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.stats-update {
+  display: flex;
+  align-items: center;
+  gap: 8rpx;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.arrow {
+  color: #999;
+}
+
+.stats-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rpx;
+}
+
+.stats-number {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+}
+
+.stats-label {
+  font-size: 24rpx;
+  color: #999;
+}
+
+/* 最近访客 */
+.recent-visitors {
+  background: #fff;
+  border-radius: 16rpx;
+  padding: 24rpx;
+}
+
+.visitor-item {
+  display: flex;
+  align-items: center;
+  gap: 16rpx;
+}
+
+.visitor-avatar {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 44rpx;
+}
+
+.visitor-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.visitor-name {
+  font-size: 28rpx;
+  color: #333;
+}
+
+.visitor-title {
+  font-size: 24rpx;
+  color: #666;
+}
+
+.visitor-company {
+  font-size: 24rpx;
+  color: #999;
+} 

@@ -1,0 +1,151 @@
+<navigation-bar title="Cargo全能王" back="{{false}}" color="black"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="page-container">
+    <!-- 轮播消息 -->
+    <view class="news-section">
+      <swiper class="news-swiper" autoplay circular vertical interval="3000">
+        <swiper-item>
+          <view class="news-item">
+            <image src="/images/notice.png" mode="aspectFit"></image>
+            <text>最新：中东航线运价上调，请及时关注更新</text>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="news-item">
+            <image src="/images/notice.png" mode="aspectFit"></image>
+            <text>通知：欧洲线路新增两个直航港口，运价已更新</text>
+          </view>
+        </swiper-item>
+        <swiper-item>
+          <view class="news-item">
+            <image src="/images/notice.png" mode="aspectFit"></image>
+            <text>提醒：东南亚航线运价将于下周三统一调整</text>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+
+    <!-- 金刚区 -->
+    <view class="grid-section">
+      <view class="grid-item" bindtap="navigateToOrderQuery">
+        <image src="/images/order-query.png" mode="aspectFit"></image>
+        <text>订单查询</text>
+      </view>
+      <view class="grid-item" bindtap="navigateToInternalInquiry">
+        <image src="/images/internal-inquiry.png" mode="aspectFit"></image>
+        <text>内部询价</text>
+      </view>
+      <view class="grid-item" bindtap="navigateToQuoteManage">
+        <image src="/images/quote-manage.png" mode="aspectFit"></image>
+        <text>报价管理</text>
+      </view>
+      <view class="grid-item" bindtap="navigateToApproval">
+        <image src="/images/approval.png" mode="aspectFit"></image>
+        <text>审批事项</text>
+      </view>
+    </view>
+
+    <!-- 瓷片区 -->
+    <view class="tiles-section">
+      <view class="tiles-content">
+        <view class="tiles-left">
+          <image class="tile-large" src="/images/ai-assistant.png" mode="aspectFit" bindtap="navigateToAIChat"></image>
+          <image class="tile-small" src="/images/mycustomer.png" mode="aspectFit" bindtap="navigateToCustomer"></image>
+        </view>
+        <view class="tiles-right">
+          <image class="tile-small" src="/images/scan-card.png" mode="aspectFit" bindtap="navigateToScanCard"></image>
+          <image class="tile-large" src="/images/new-inquiry.png" mode="aspectFit" bindtap="navigateToNewInquiry"></image>
+        </view>
+      </view>
+    </view>
+
+    <!-- 审批事项 -->
+    <view class="approval-section">
+      <view class="section-title">审批事项</view>
+      <view class="tab-header">
+        <view class="tab-item {{currentTab === 'submit' ? 'active' : ''}}" bindtap="switchTab" data-tab="submit">
+          <text>我提交的</text>
+        </view>
+        <view class="tab-item {{currentTab === 'approve' ? 'active' : ''}}" bindtap="switchTab" data-tab="approve">
+          <text>我审批的</text>
+        </view>
+      </view>
+      
+      <view class="approval-list" wx:if="{{currentTab === 'submit'}}">
+        <view class="approval-item">
+          <view class="approval-title">内部询价申请 - BOM20240223001</view>
+          <view class="approval-info">
+            <text class="status pending">审批中</text>
+            <text class="time">2024-02-23 14:30</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">运价更新申请 - RATE20240222001</view>
+          <view class="approval-info">
+            <text class="status approved">已通过</text>
+            <text class="time">2024-02-22 16:45</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">新航线开通申请 - LINE20240221003</view>
+          <view class="approval-info">
+            <text class="status rejected">已拒绝</text>
+            <text class="time">2024-02-21 09:15</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">特殊货物申请 - SPEC20240220002</view>
+          <view class="approval-info">
+            <text class="status pending">审批中</text>
+            <text class="time">2024-02-20 11:20</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">运费减免申请 - DISC20240219001</view>
+          <view class="approval-info">
+            <text class="status approved">已通过</text>
+            <text class="time">2024-02-19 15:40</text>
+          </view>
+        </view>
+      </view>
+      
+      <view class="approval-list" wx:if="{{currentTab === 'approve'}}">
+        <view class="approval-item">
+          <view class="approval-title">客户报价申请 - QUOTE20240223002</view>
+          <view class="approval-info">
+            <text class="status pending">待审批</text>
+            <text class="time">2024-02-23 15:20</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">新客户添加 - CUST20240222003</view>
+          <view class="approval-info">
+            <text class="status rejected">已拒绝</text>
+            <text class="time">2024-02-22 11:30</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">运费调整 - ADJ20240221002</view>
+          <view class="approval-info">
+            <text class="status approved">已通过</text>
+            <text class="time">2024-02-21 17:40</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">集装箱改配 - CONT20240220001</view>
+          <view class="approval-info">
+            <text class="status pending">待审批</text>
+            <text class="time">2024-02-20 13:25</text>
+          </view>
+        </view>
+        <view class="approval-item">
+          <view class="approval-title">航线变更 - ROUTE20240219002</view>
+          <view class="approval-info">
+            <text class="status approved">已通过</text>
+            <text class="time">2024-02-19 10:15</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

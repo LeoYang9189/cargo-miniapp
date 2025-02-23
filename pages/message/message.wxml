@@ -1,0 +1,61 @@
+<!--pages/message/message.wxml-->
+<navigation-bar title="消息" back="{{false}}" color="black"></navigation-bar>
+
+<!-- 然后是搜索框 -->
+<view class="search-container">
+  <view class="search-box">
+    <input type="text" placeholder="检索近期联络人" placeholder-class="placeholder-style"/>
+    <image class="search-icon" src="/images/search.png" mode="aspectFit"></image>
+  </view>
+</view>
+
+<!-- 最后是消息列表 -->
+<scroll-view class="message-list" scroll-y>
+  <!-- 置顶消息 -->
+  <view class="pinned-messages">
+    <!-- AI助手 -->
+    <view class="message-item pinned" bindtap="gotoChat" data-id="ai">
+      <image class="avatar" src="/images/avatar1.png" mode="aspectFill"></image>
+      <view class="message-content">
+        <view class="message-header">
+          <view class="name-container">
+            <text class="name">沃宝</text>
+            <image class="pin-icon" src="/images/star.png" mode="aspectFit"></image>
+          </view>
+          <text class="time">AI助手</text>
+        </view>
+        <text class="last-message">你好，我是你的智能助手沃宝，请问有什么可以帮你？</text>
+      </view>
+    </view>
+
+    <!-- 专属客服 -->
+    <view class="message-item pinned" bindtap="gotoChat" data-id="service">
+      <image class="avatar" src="/images/avatar2.png" mode="aspectFill"></image>
+      <view class="message-content">
+        <view class="message-header">
+          <view class="name-container">
+            <text class="name">朱丹</text>
+            <image class="pin-icon" src="/images/star.png" mode="aspectFit"></image>
+          </view>
+          <text class="time">专属客服</text>
+        </view>
+        <text class="last-message">您好，我是您的专属客服，有任何问题随时找我~</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 普通消息列表 -->
+  <view class="normal-messages">
+    <view class="message-item" wx:for="{{messageList}}" wx:key="id" 
+          bindtap="gotoChat" data-id="{{item.id}}">
+      <image class="avatar" src="{{item.avatar}}" mode="aspectFill"></image>
+      <view class="message-content">
+        <view class="message-header">
+          <text class="name">{{item.name}}</text>
+          <text class="time">{{item.time}}</text>
+        </view>
+        <text class="last-message">{{item.lastMessage}}</text>
+      </view>
+    </view>
+  </view>
+</scroll-view>

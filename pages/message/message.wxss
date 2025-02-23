@@ -1,0 +1,168 @@
+/* pages/message/message.wxss */
+page {
+  background: #F6F6F6;
+}
+
+/* 自定义导航栏样式 - 移除所有固定定位相关样式 */
+.custom-navigation-bar {
+  background: #FFFFFF;
+  padding-top: env(safe-area-inset-top);
+}
+
+.navigation-bar-content {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+}
+
+.navigation-bar-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 搜索框样式 */
+.search-container {
+  padding: 24rpx;
+  background: #FFFFFF;
+  margin-top: calc(var(--menu-button-height) + var(--menu-button-top));
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #FFFFFF;
+  border-radius: 32rpx;
+  padding: 16rpx 24rpx;
+  margin-bottom: 16rpx;
+  position: relative;
+  width: 700rpx;
+  margin: 0 auto;
+  border: 1rpx solid #EEEEEE;
+}
+
+input {
+  flex: 1;
+  font-size: 28rpx;
+  padding-right: 40rpx;
+  background: #FFFFFF;
+}
+
+.search-icon {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 24rpx;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.placeholder-style {
+  color: #999999;
+  font-size: 28rpx;
+}
+
+/* 消息列表样式 */
+.message-list {
+  height: calc(100vh - env(safe-area-inset-top) - 120rpx);
+  overflow-y: auto;
+}
+
+/* 置顶消息区域 */
+.pinned-messages {
+  margin-bottom: 16rpx;
+}
+
+/* 消息项样式 */
+.message-item {
+  display: flex;
+  padding: 24rpx;
+  background: #FFFFFF;
+  position: relative;
+  margin-bottom: 2rpx;
+}
+
+/* 分割线 */
+.message-item::after {
+  content: '';
+  position: absolute;
+  left: 24rpx;
+  right: 0;
+  bottom: 0;
+  height: 1rpx;
+  background: #EEEEEE;
+}
+
+/* 最后一个消息项不显示分割线 */
+.message-item:last-child::after {
+  display: none;
+}
+
+/* 头像样式 */
+.avatar {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: 8rpx;
+  margin-right: 24rpx;
+  background: #F6F6F6;
+}
+
+/* 置顶消息的蓝色标识 */
+.pinned::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 8rpx;
+  height: 100%;
+  background: #1296db;
+}
+
+/* 消息内容区域 */
+.message-content {
+  flex: 1;
+  overflow: hidden;
+  padding: 4rpx 0;
+}
+
+/* 名称和图标容器 */
+.name-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rpx;
+}
+
+/* 五角星图标 */
+.pin-icon {
+  width: 24rpx;
+  height: 24rpx;
+  margin-left: 8rpx;
+}
+
+/* 消息头部布局 */
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12rpx;
+}
+
+.name {
+  font-size: 28rpx;
+  color: #333333;
+  font-weight: 500;
+}
+
+.time {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+.last-message {
+  font-size: 24rpx;
+  color: #666666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

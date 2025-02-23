@@ -1,0 +1,111 @@
+<!--pages/scan-card/index.wxml-->
+<navigation-bar title="全能名片" back="{{true}}" color="black" bindback="onBack"></navigation-bar>
+
+<view class="card-container">
+  <!-- 名片主体 -->
+  <view class="card-main">
+    <view class="card-header">
+      <text class="name">陈天池</text>
+      <text class="title">总经理</text>
+      <text class="company">上海AAA供应链管理有限公司</text>
+    </view>
+
+    <view class="card-info">
+      <view class="info-item">
+        <image src="/images/phone.png" mode="aspectFit"></image>
+        <text>134 8236 0000</text>
+      </view>
+      <view class="info-item">
+        <image src="/images/email.png" mode="aspectFit"></image>
+        <text>gm@leotech.com</text>
+      </view>
+      <view class="info-item">
+        <image src="/images/location.png" mode="aspectFit"></image>
+        <text>上海市闵行区1222号</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作按钮区域 -->
+  <view class="action-area">
+    <view class="action-row">
+      <view class="action-item" bindtap="editProfile">
+        <image src="/images/edit.png" mode="aspectFit"></image>
+        <text>编辑资料</text>
+      </view>
+      <view class="action-item" bindtap="changeStyle">
+        <image src="/images/style.png" mode="aspectFit"></image>
+        <text>名片样式</text>
+      </view>
+      <view class="action-item" bindtap="switchCard">
+        <image src="/images/switch.png" mode="aspectFit"></image>
+        <text>切换名片</text>
+      </view>
+    </view>
+
+    <button class="share-button" bindtap="shareCard">发名片</button>
+  </view>
+
+  <!-- 底部功能区 -->
+  <view class="bottom-tabs">
+    <view class="tab-item">
+      <image src="/images/card-image.png" mode="aspectFit"></image>
+      <text>名片图片</text>
+    </view>
+    <view class="tab-item">
+      <image src="/images/text-to-card.png" mode="aspectFit"></image>
+      <text>文字转名片</text>
+    </view>
+    <view class="tab-item">
+      <image src="/images/card-list.png" mode="aspectFit"></image>
+      <text>名片榜单</text>
+    </view>
+    <view class="tab-item">
+      <image src="/images/company-card.png" mode="aspectFit"></image>
+      <text>企业名片</text>
+    </view>
+    <view class="tab-item">
+      <image src="/images/all.png" mode="aspectFit"></image>
+      <text>全部</text>
+    </view>
+  </view>
+
+  <!-- 名片数据统计 -->
+  <view class="card-stats">
+    <view class="stats-header">
+      <text class="stats-title">我的名片数据</text>
+      <view class="stats-update" bindtap="viewUpdates">
+        <text>有 1 张名片有更新</text>
+        <text class="arrow">></text>
+      </view>
+    </view>
+
+    <view class="stats-content">
+      <view class="stats-item">
+        <text class="stats-number">8</text>
+        <text class="stats-label">我的访客</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-number">4</text>
+        <text class="stats-label">我看过的</text>
+      </view>
+      <view class="stats-item">
+        <text class="stats-number">0</text>
+        <text class="stats-label">好友新名片</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最近访客 -->
+  <view class="recent-visitors">
+    <view class="visitor-item">
+      <image class="visitor-avatar" src="/images/visitor-avatar.png" mode="aspectFill"></image>
+      <view class="visitor-info">
+        <text class="visitor-name">玛丽</text>
+        <text class="visitor-title">运营总监</text>
+        <text class="visitor-company">成都市全欧达供应链管理有限公司</text>
+      </view>
+      <text class="visitor-status">等待回应</text>
+    </view>
+  </view>
+</view> 

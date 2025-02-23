@@ -1,0 +1,257 @@
+/* pages/profile/profile.wxss */
+page {
+  background: #F6F6F6;
+}
+
+/* 导航栏样式 */
+.custom-navigation-bar {
+  background: #FFFFFF;
+  padding-top: calc(120rpx + env(safe-area-inset-top));
+}
+
+.navigation-bar-content {
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 32rpx;
+}
+
+.navigation-bar-title {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 用户信息区域 */
+.user-info {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 32rpx 24rpx;
+  margin-bottom: 16rpx;
+}
+
+.user-basic {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 60rpx;
+  margin-right: 24rpx;
+  border: 6rpx solid #FFFFFF;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.1);
+}
+
+.username {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333333;
+}
+
+/* 功能区域 */
+.function-area {
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF;
+  padding: 32rpx 0;
+  border-radius: 16rpx;
+  margin: 16rpx 0;
+}
+
+.function-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.function-item image {
+  width: 48rpx;
+  height: 48rpx;
+  margin-bottom: 12rpx;
+}
+
+.function-item text {
+  font-size: 24rpx;
+  color: #666666;
+}
+
+/* 专属客服卡片 */
+.service-card {
+  background: linear-gradient(135deg, #2C3033 0%, #1A1D1F 100%);  /* 深色渐变背景 */
+  border-radius: 16rpx;
+  padding: 32rpx;
+  margin-bottom: 16rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 添加背景装饰效果 */
+.service-card::after {
+  content: '';
+  position: absolute;
+  right: -100rpx;
+  bottom: -100rpx;
+  width: 300rpx;
+  height: 300rpx;
+  background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.05));
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.service-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+}
+
+.service-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-name {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #E6C785;  /* 暖金色 */
+  margin-bottom: 8rpx;
+}
+
+/* 添加微弱的文字阴影，增强立体感 */
+.service-name::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(to right, #D4AF37, #E6C785);  /* 稍深的金色渐变 */
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0.5;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+.service-desc {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 右侧图标区域 */
+.contact-area {
+  display: flex;
+  align-items: center;
+  gap: 12rpx;  /* 二维码和箭头之间的间距 */
+  position: relative;
+  z-index: 2;
+}
+
+.qrcode-icon {
+  width: 48rpx;
+  height: 48rpx;
+  opacity: 0.9;
+}
+
+.arrow-right {
+  width: 32rpx;
+  height: 32rpx;
+  opacity: 0.7;
+  filter: brightness(10);
+}
+
+/* 企业认证入口 */
+.verify-entry {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 32rpx 24rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.verify-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.verify-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+  flex-shrink: 0;
+}
+
+.company-name {
+  font-size: 28rpx;
+  color: #333333;
+  margin-right: 8rpx;
+  flex: 1;
+}
+
+.verify-success {
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 8rpx;
+  flex-shrink: 0;
+}
+
+.arrow-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 16rpx;
+  flex-shrink: 0;
+}
+
+/* 移除头像外圈装饰 */
+.avatar::after {
+  display: none;
+}
+
+/* 用户中心功能区 */
+.section-title {
+  padding: 32rpx 24rpx 16rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.function-grid {
+  background: #FFFFFF;
+  padding: 24rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32rpx 24rpx;
+  border-bottom: 1rpx solid #EEEEEE;
+}
+
+.list-item text {
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.profile-container {
+  min-height: 100vh;
+  background: #F5F7FA;
+  padding: 0 24rpx;
+  padding-top: 180rpx;
+}
