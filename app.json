@@ -5,7 +5,8 @@
     "pages/profile/profile",
     "pages/logs/logs",
     "pages/ai-chat/index",
-    "pages/scan-card/index"
+    "pages/scan-card/index",
+    "pages/order-query/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

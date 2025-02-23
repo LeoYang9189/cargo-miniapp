@@ -1,0 +1,100 @@
+<navigation-bar title="订单跟踪" back="{{true}}" color="black" bindback="onBack"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="page-container">
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <input type="text" placeholder="支持提单号/箱号跟踪" placeholder-class="placeholder"/>
+      <image class="search-icon" src="/images/search.png" mode="aspectFit"></image>
+    </view>
+
+    <!-- 控制塔区域 -->
+    <view class="control-tower">
+      <view class="section-title">控制塔</view>
+      <view class="grid-container">
+        <!-- 预计七天抵港 -->
+        <view class="grid-item blue">
+          <view class="item-content">
+            <view class="item-title">预计七天抵港</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/ship-arrival.png" mode="aspectFit"></image>
+        </view>
+
+        <!-- 预计延误 -->
+        <view class="grid-item red">
+          <view class="item-content">
+            <view class="item-title">预计延误</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/delay.png" mode="aspectFit"></image>
+        </view>
+
+        <!-- 甩柜 -->
+        <view class="grid-item pink">
+          <view class="item-content">
+            <view class="item-title">甩柜</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/container.png" mode="aspectFit"></image>
+        </view>
+
+        <!-- 预计滞箱 -->
+        <view class="grid-item orange">
+          <view class="item-content">
+            <view class="item-title">预计滞箱</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/detention.png" mode="aspectFit"></image>
+        </view>
+
+        <!-- 等待提货 -->
+        <view class="grid-item cyan">
+          <view class="item-content">
+            <view class="item-title">等待提货</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/pickup.png" mode="aspectFit"></image>
+        </view>
+
+        <!-- 等待装船 -->
+        <view class="grid-item purple">
+          <view class="item-content">
+            <view class="item-title">等待装船</view>
+            <view class="item-number">0</view>
+            <view class="item-link">去查看 ></view>
+          </view>
+          <image class="item-icon" src="/images/loading.png" mode="aspectFit"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 底部功能区 -->
+<view class="bottom-tabs">
+  <view class="tab-item">
+    <image src="/images/track.png" mode="aspectFit"></image>
+    <text>跟踪</text>
+  </view>
+  <view class="tab-item">
+    <image src="/images/schedule.png" mode="aspectFit"></image>
+    <text>船期</text>
+  </view>
+  <view class="tab-item">
+    <image src="/images/location.png" mode="aspectFit"></image>
+    <text>船定位</text>
+  </view>
+  <view class="tab-item">
+    <image src="/images/alert.png" mode="aspectFit"></image>
+    <text>异常提醒</text>
+  </view>
+  <view class="share-btn">
+    <text>邀好友</text>
+    <text class="highlight">得免费订阅</text>
+  </view>
+</view> 

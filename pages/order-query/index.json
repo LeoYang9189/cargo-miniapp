@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单查询",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar"
+  }
+} 
