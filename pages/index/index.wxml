@@ -78,6 +78,7 @@
             <text class="status pending">审批中</text>
             <text class="time">2024-02-23 14:30</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">运价更新申请 - RATE20240222001</view>
@@ -85,6 +86,7 @@
             <text class="status approved">已通过</text>
             <text class="time">2024-02-22 16:45</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">新航线开通申请 - LINE20240221003</view>
@@ -92,6 +94,7 @@
             <text class="status rejected">已拒绝</text>
             <text class="time">2024-02-21 09:15</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">特殊货物申请 - SPEC20240220002</view>
@@ -99,6 +102,7 @@
             <text class="status pending">审批中</text>
             <text class="time">2024-02-20 11:20</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">运费减免申请 - DISC20240219001</view>
@@ -106,6 +110,7 @@
             <text class="status approved">已通过</text>
             <text class="time">2024-02-19 15:40</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
       </view>
       
@@ -116,6 +121,7 @@
             <text class="status pending">待审批</text>
             <text class="time">2024-02-23 15:20</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">新客户添加 - CUST20240222003</view>
@@ -123,6 +129,7 @@
             <text class="status rejected">已拒绝</text>
             <text class="time">2024-02-22 11:30</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">运费调整 - ADJ20240221002</view>
@@ -130,6 +137,7 @@
             <text class="status approved">已通过</text>
             <text class="time">2024-02-21 17:40</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">集装箱改配 - CONT20240220001</view>
@@ -137,6 +145,7 @@
             <text class="status pending">待审批</text>
             <text class="time">2024-02-20 13:25</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="approval-item">
           <view class="approval-title">航线变更 - ROUTE20240219002</view>
@@ -144,6 +153,7 @@
             <text class="status approved">已通过</text>
             <text class="time">2024-02-19 10:15</text>
           </view>
+          <image class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
       </view>
     </view>

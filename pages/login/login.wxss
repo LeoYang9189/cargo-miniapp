@@ -1,0 +1,102 @@
+.login-container {
+  min-height: 100vh;
+  padding: 0 48rpx;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-area {
+  margin-top: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  width: 160rpx;
+  height: 160rpx;
+}
+
+.title {
+  margin-top: 24rpx;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.form-area {
+  width: 100%;
+  margin-top: 80rpx;
+}
+
+.input-item {
+  display: flex;
+  align-items: center;
+  height: 96rpx;
+  padding: 0 24rpx;
+  background: #F8F8F8;
+  border-radius: 12rpx;
+  margin-bottom: 24rpx;
+}
+
+.input-item .icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 16rpx;
+}
+
+.input-item input {
+  flex: 1;
+  height: 100%;
+  font-size: 28rpx;
+}
+
+.forgot-password {
+  text-align: right;
+  font-size: 24rpx;
+  color: #1296db;
+  margin: 16rpx 0 48rpx;
+}
+
+.login-btn {
+  width: 100% !important;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #1296db;
+  color: #ffffff;
+  font-size: 32rpx;
+  border-radius: 12rpx;
+  font-weight: normal;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48rpx 0;
+}
+
+.divider .line {
+  width: 160rpx;
+  height: 2rpx;
+  background: #EEEEEE;
+}
+
+.divider text {
+  margin: 0 24rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.social-login {
+  display: flex;
+  justify-content: center;
+}
+
+.wechat-icon {
+  width: 80rpx;
+  height: 80rpx;
+  padding: 24rpx;
+} 

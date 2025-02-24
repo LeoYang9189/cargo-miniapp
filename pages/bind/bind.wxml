@@ -1,0 +1,28 @@
+<!-- 账号绑定页面 -->
+<view class="bind-container">
+  <view class="header">
+    <image class="wechat-avatar" src="{{userInfo.avatarUrl || '/images/default-avatar.png'}}" mode="aspectFill"></image>
+    <text class="nickname">{{userInfo.nickName || '微信用户'}}</text>
+  </view>
+
+  <view class="form-area">
+    <view class="title">绑定Cargo全能王账号</view>
+    <view class="subtitle">绑定后可使用微信快捷登录</view>
+    
+    <view class="input-item">
+      <image class="icon" src="/images/email.png" mode="aspectFit"></image>
+      <input type="text" placeholder="请输入邮箱" model:value="{{email}}" />
+    </view>
+    <view class="input-item">
+      <image class="icon" src="/images/password.png" mode="aspectFit"></image>
+      <input type="password" placeholder="请输入密码" model:value="{{password}}" password />
+    </view>
+
+    <button class="bind-btn" bindtap="handleBind">立即绑定</button>
+    
+    <view class="tips">
+      <text>没有账号？</text>
+      <text class="link" bindtap="onRegister">立即注册</text>
+    </view>
+  </view>
+</view> 

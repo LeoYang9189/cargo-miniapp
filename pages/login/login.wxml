@@ -1,0 +1,32 @@
+<!-- 登录页面 -->
+<view class="login-container">
+  <view class="logo-area">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="title">Cargo全能王</text>
+  </view>
+
+  <view class="form-area">
+    <view class="input-item">
+      <image class="icon" src="/images/email.png" mode="aspectFit"></image>
+      <input type="text" placeholder="请输入邮箱" model:value="{{email}}" />
+    </view>
+    <view class="input-item">
+      <image class="icon" src="/images/password.png" mode="aspectFit"></image>
+      <input type="password" placeholder="请输入密码" model:value="{{password}}" password />
+    </view>
+    
+    <view class="forgot-password" bindtap="onForgotPassword">忘记密码？</view>
+    
+    <button class="login-btn" bindtap="handleLogin">登录</button>
+    
+    <view class="divider">
+      <view class="line"></view>
+      <text>其他登录方式</text>
+      <view class="line"></view>
+    </view>
+    
+    <view class="social-login">
+      <image class="wechat-icon" src="/images/wechat.png" mode="aspectFit" bindtap="handleWechatLogin"></image>
+    </view>
+  </view>
+</view> 

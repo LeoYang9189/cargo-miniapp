@@ -199,8 +199,17 @@ page {
   transform: translateX(-50%);
   width: 96rpx;
   height: 36rpx;
-  background: url('/images/check.png') no-repeat center/contain;
   border-radius: 0;
+}
+
+/* 添加图片样式 */
+.check-image {
+  position: absolute;
+  bottom: -6rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 96rpx;
+  height: 36rpx;
 }
 
 .approval-list {

@@ -12,63 +12,63 @@
       <view class="section-title">控制塔</view>
       <view class="grid-container">
         <!-- 预计七天抵港 -->
-        <view class="grid-item blue">
-          <view class="item-content">
-            <view class="item-title">预计七天抵港</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item blue" bindtap="onViewDetail" data-type="arrival">
           <image class="item-icon" src="/images/ship-arrival.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">预计七天抵港</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
 
         <!-- 预计延误 -->
-        <view class="grid-item red">
-          <view class="item-content">
-            <view class="item-title">预计延误</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item red" bindtap="onViewDetail" data-type="delay">
           <image class="item-icon" src="/images/delay.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">预计延误</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
 
         <!-- 甩柜 -->
-        <view class="grid-item pink">
-          <view class="item-content">
-            <view class="item-title">甩柜</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item pink" bindtap="onViewDetail" data-type="container">
           <image class="item-icon" src="/images/container.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">甩柜</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
 
         <!-- 预计滞箱 -->
-        <view class="grid-item orange">
-          <view class="item-content">
-            <view class="item-title">预计滞箱</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item orange" bindtap="onViewDetail" data-type="detention">
           <image class="item-icon" src="/images/detention.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">预计滞箱</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
 
         <!-- 等待提货 -->
-        <view class="grid-item cyan">
-          <view class="item-content">
-            <view class="item-title">等待提货</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item cyan" bindtap="onViewDetail" data-type="pickup">
           <image class="item-icon" src="/images/pickup.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">等待提货</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
 
         <!-- 等待装船 -->
-        <view class="grid-item purple">
-          <view class="item-content">
-            <view class="item-title">等待装船</view>
-            <view class="item-number">0</view>
-            <view class="item-link">去查看 ></view>
-          </view>
+        <view class="grid-item purple" bindtap="onViewDetail" data-type="loading">
           <image class="item-icon" src="/images/loading.png" mode="aspectFit"></image>
+          <view class="item-content">
+            <text class="item-title">等待装船</text>
+            <text class="item-number">0</text>
+            <text class="item-link">去查看 ></text>
+          </view>
         </view>
       </view>
     </view>

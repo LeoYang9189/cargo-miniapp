@@ -1,9 +1,10 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/index/index",
+    "pages/bind/bind",
     "pages/message/message",
     "pages/profile/profile",
-    "pages/logs/logs",
     "pages/ai-chat/index",
     "pages/scan-card/index",
     "pages/order-query/index"
