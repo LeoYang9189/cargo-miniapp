@@ -1,0 +1,80 @@
+<navigation-bar title="内部询价" back="{{true}}" color="black" bindback="onBack"></navigation-bar>
+
+<view class="page-container">
+  <form bindsubmit="submitForm">
+    <!-- 基本信息 -->
+    <view class="form-group">
+      <view class="form-item">
+        <text class="label">条款</text>
+        <picker bindchange="onTermsChange" value="{{termsIndex}}" range="{{terms}}">
+          <view class="picker">{{terms[termsIndex]}}</view>
+        </picker>
+      </view>
+
+      <view class="form-item">
+        <text class="label">起运港</text>
+        <picker bindchange="onPolChange" value="{{polIndex}}" range="{{pols}}">
+          <view class="picker">{{pols[polIndex]}}</view>
+        </picker>
+      </view>
+
+      <view class="form-item">
+        <text class="label">目的港</text>
+        <picker bindchange="onPodChange" value="{{podIndex}}" range="{{pods}}">
+          <view class="picker">{{pods[podIndex] || '请选择'}}</view>
+        </picker>
+      </view>
+
+      <view class="form-item">
+        <text class="label">意向船公司</text>
+        <picker bindchange="onCarrierChange" value="{{carrierIndex}}" range="{{carriers}}">
+          <view class="picker">{{carriers[carrierIndex]}}</view>
+        </picker>
+      </view>
+
+      <view class="form-item">
+        <text class="label">品名</text>
+        <input type="text" value="{{commodity}}" placeholder="请输入品名" bindinput="onCommodityInput"/>
+      </view>
+    </view>
+
+    <!-- 整拼类型 -->
+    <view class="form-group">
+      <view class="form-title">整拼类型</view>
+      <view class="checkbox-group">
+        <view class="checkbox {{shipmentType === 'FCL' ? 'checked' : ''}}" bindtap="onShipmentTypeChange" data-type="FCL">
+          <image class="checkbox-icon" src="/images/{{shipmentType === 'FCL' ? 'checked' : 'unchecked'}}.png" mode="aspectFit"></image>
+          <text>整箱</text>
+        </view>
+        <view class="checkbox {{shipmentType === 'LCL' ? 'checked' : ''}}" bindtap="onShipmentTypeChange" data-type="LCL">
+          <image class="checkbox-icon" src="/images/{{shipmentType === 'LCL' ? 'checked' : 'unchecked'}}.png" mode="aspectFit"></image>
+          <text>拼箱</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 箱型箱量 -->
+    <block wx:if="{{shipmentType === 'FCL'}}">
+      <view class="form-group">
+        <view class="form-title">箱型箱量</view>
+        <view class="container-list">
+          <view class="container-item" wx:for="{{containers}}" wx:key="index">
+            <picker bindchange="onContainerTypeChange" data-index="{{index}}" value="{{item.typeIndex}}" range="{{containerTypes}}">
+              <view class="container-type">{{containerTypes[item.typeIndex] || '选择箱型'}}</view>
+            </picker>
+            <input type="number" class="container-quantity" value="{{item.quantity}}" placeholder="箱量" bindinput="onQuantityInput" data-index="{{index}}"/>
+            <view class="delete-btn" wx:if="{{index !== 0}}" bindtap="deleteContainer" data-index="{{index}}">
+              <image src="/images/delete.png" mode="aspectFit"></image>
+            </view>
+          </view>
+        </view>
+        <view class="add-container" bindtap="addContainer" wx:if="{{containers.length < 5}}">
+          <image src="/images/add.png" mode="aspectFit"></image>
+          <text>添加箱型</text>
+        </view>
+      </view>
+    </block>
+
+    <button class="submit-btn" form-type="submit">提交询价</button>
+  </form>
+</view> 

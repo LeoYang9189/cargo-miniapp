@@ -9,7 +9,9 @@ Page({
   },
 
   goBack() {
-    wx.navigateBack();
+    wx.switchTab({
+      url: '/pages/index/index'
+    });
   },
 
   onLoad(options) {
@@ -132,5 +134,36 @@ Page({
     ];
 
     return featureResponses[Math.floor(Math.random() * featureResponses.length)];
+  },
+
+  // 重置对话
+  resetChat() {
+    wx.showModal({
+      title: '提示',
+      content: '确定要清空当前对话吗？',
+      success: (res) => {
+        if (res.confirm) {
+          this.setData({
+            messages: [],
+            messageId: 1
+          });
+          // 显示初始提示
+          this.showInitialHint();
+        }
+      }
+    });
+  },
+
+  // 显示初始提示
+  showInitialHint() {
+    const welcomeMessage = '您好！我是您的AI助手，请问有什么可以帮您？';
+    this.setData({
+      messages: [{
+        id: 1,
+        type: 'ai',
+        content: welcomeMessage,
+        time: '现在'
+      }]
+    });
   }
 }); 

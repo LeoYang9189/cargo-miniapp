@@ -1,0 +1,47 @@
+<navigation-bar title="审批事项" back="{{true}}" color="black" bindback="onBack"></navigation-bar>
+
+<view class="page-container">
+  <!-- 搜索框 -->
+  <view class="search-box">
+    <input type="text" placeholder="搜索审批事项" placeholder-class="placeholder" model:value="{{searchValue}}" bindconfirm="onSearch"/>
+    <image class="search-icon" src="/images/search.png" mode="aspectFit"></image>
+  </view>
+
+  <!-- Tab切换 -->
+  <view class="tab-header">
+    <view class="tab-item {{currentTab === 'submit' ? 'active' : ''}}" bindtap="switchTab" data-tab="submit">
+      <text>我提交的</text>
+      <image class="check-image" src="/images/check.png" wx:if="{{currentTab === 'submit'}}"></image>
+    </view>
+    <view class="tab-item {{currentTab === 'approve' ? 'active' : ''}}" bindtap="switchTab" data-tab="approve">
+      <text>我审批的</text>
+      <image class="check-image" src="/images/check.png" wx:if="{{currentTab === 'approve'}}"></image>
+    </view>
+  </view>
+
+  <!-- 审批列表 -->
+  <scroll-view class="scrollarea" scroll-y type="list">
+    <view class="approval-list">
+      <view class="approval-card" wx:for="{{approvalList}}" wx:key="id" bindtap="onApprovalDetail" data-id="{{item.id}}">
+        <view class="card-header">
+          <text class="approval-title">{{item.title}}</text>
+          <text class="approval-status {{item.status}}">{{item.statusText}}</text>
+        </view>
+        <view class="card-content">
+          <view class="info-row">
+            <text class="label">申请人：</text>
+            <text class="value">{{item.applicant}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">申请时间：</text>
+            <text class="value">{{item.applyTime}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">审批类型：</text>
+            <text class="value">{{item.type}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view> 

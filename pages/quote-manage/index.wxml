@@ -1,0 +1,63 @@
+<navigation-bar title="报价管理" back="{{true}}" color="black" bindback="onBack"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <view class="page-container">
+    <!-- 搜索框 -->
+    <view class="search-box">
+      <input type="text" placeholder="搜索报价单号/客户名称" placeholder-class="placeholder" model:value="{{searchValue}}" bindconfirm="onSearch"/>
+      <image class="search-icon" src="/images/search.png" mode="aspectFit"></image>
+    </view>
+
+    <!-- Tab切换 -->
+    <view class="tab-header">
+      <view class="tab-item {{currentTab === 'pending' ? 'active' : ''}}" bindtap="switchTab" data-tab="pending">
+        <text>待报价</text>
+        <image wx:if="{{currentTab === 'pending'}}" class="check-image" src="/images/check.png" mode="aspectFit"></image>
+      </view>
+      <view class="tab-item {{currentTab === 'quoted' ? 'active' : ''}}" bindtap="switchTab" data-tab="quoted">
+        <text>已报价</text>
+        <image wx:if="{{currentTab === 'quoted'}}" class="check-image" src="/images/check.png" mode="aspectFit"></image>
+      </view>
+    </view>
+
+    <!-- 报价列表 -->
+    <view class="quote-list">
+      <view class="quote-card" wx:for="{{currentTab === 'pending' ? pendingQuotes : quotedQuotes}}" wx:key="id">
+        <view class="card-header">
+          <text class="quote-id">{{item.quoteId}}</text>
+          <text class="status {{item.status}}">{{item.statusText}}</text>
+        </view>
+        <view class="card-info">
+          <view class="info-row">
+            <text class="label">起运港</text>
+            <text class="value">{{item.pol}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">目的港</text>
+            <text class="value">{{item.pod}}</text>
+          </view>
+          <view class="info-row">
+            <text class="label">客户名称</text>
+            <text class="value">{{item.customerName}}</text>
+          </view>
+        </view>
+        <view class="price-info">
+          <view class="price-row">
+            <text class="container-type">20GP</text>
+            <text class="price">{{item.price20GP}}</text>
+          </view>
+          <view class="price-row">
+            <text class="container-type">40GP</text>
+            <text class="price">{{item.price40GP}}</text>
+          </view>
+          <view class="price-row">
+            <text class="container-type">40HC</text>
+            <text class="price">{{item.price40HC}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<!-- 创建报价按钮 -->
+<view class="create-btn" bindtap="onCreateQuote">创建报价</view> 

@@ -22,7 +22,9 @@ Page({
     wx.navigateTo({ url: '/pages/quote-manage/index' });
   },
   navigateToApproval() {
-    wx.navigateTo({ url: '/pages/approval/index' });
+    wx.navigateTo({
+      url: '/pages/approval-list/index'
+    });
   },
   navigateToAIChat() {
     wx.navigateTo({ url: '/pages/ai-chat/index' });
@@ -36,7 +38,9 @@ Page({
     });
   },
   navigateToNewInquiry() {
-    wx.navigateTo({ url: '/pages/new-inquiry/index' });
+    wx.navigateTo({
+      url: '/pages/internal-inquiry/index'
+    });
   }
 });
 

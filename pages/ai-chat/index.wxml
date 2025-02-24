@@ -1,15 +1,11 @@
-<view class="nav-bar">
-  <view class="nav-left">
-  </view>
-  <view class="nav-right">
-    <image class="nav-icon" src="/images/refresh.png" mode="aspectFit"></image>
-    <navigator class="nav-icon" url="/pages/index/index" open-type="switchTab">
-      <image src="/images/close.png" mode="aspectFit" style="width: 100%; height: 100%;"></image>
-    </navigator>
-  </view>
-</view>
+<navigation-bar title="AI助手" back="{{true}}" color="black" bindback="goBack"></navigation-bar>
 
 <view class="container">
+  <view class="refresh-btn" bindtap="resetChat">
+    <image src="/images/refresh.png" mode="aspectFit"></image>
+    <text>重新对话</text>
+  </view>
+
   <scroll-view class="chat-area" scroll-y>
     <view class="ai-intro">
       <image class="ai-avatar" src="/images/ai-avatar.png" mode="aspectFit"></image>

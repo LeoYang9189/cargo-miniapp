@@ -7,7 +7,11 @@
     "pages/profile/profile",
     "pages/ai-chat/index",
     "pages/scan-card/index",
-    "pages/order-query/index"
+    "pages/order-query/index",
+    "pages/customer/index",
+    "pages/internal-inquiry/index",
+    "pages/quote-manage/index",
+    "pages/approval-list/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",

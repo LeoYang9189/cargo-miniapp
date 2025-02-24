@@ -61,13 +61,18 @@
 
     <!-- 审批事项 -->
     <view class="approval-section">
-      <view class="section-title">审批事项</view>
+      <view class="section-header">
+        <text class="section-title">审批事项</text>
+        <view class="view-more" bindtap="navigateToApproval">查看更多</view>
+      </view>
       <view class="tab-header">
         <view class="tab-item {{currentTab === 'submit' ? 'active' : ''}}" bindtap="switchTab" data-tab="submit">
           <text>我提交的</text>
+          <image wx:if="{{currentTab === 'submit'}}" class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
         <view class="tab-item {{currentTab === 'approve' ? 'active' : ''}}" bindtap="switchTab" data-tab="approve">
           <text>我审批的</text>
+          <image wx:if="{{currentTab === 'approve'}}" class="check-image" src="/images/check.png" mode="aspectFit"></image>
         </view>
       </view>
       

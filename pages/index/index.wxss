@@ -192,17 +192,9 @@ page {
 }
 
 .tab-item.active::after {
-  content: '';
-  position: absolute;
-  bottom: -6rpx;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 96rpx;
-  height: 36rpx;
-  border-radius: 0;
+  display: none;
 }
 
-/* 添加图片样式 */
 .check-image {
   position: absolute;
   bottom: -6rpx;
@@ -210,6 +202,7 @@ page {
   transform: translateX(-50%);
   width: 96rpx;
   height: 36rpx;
+  display: block;
 }
 
 .approval-list {
@@ -270,4 +263,16 @@ page {
   font-weight: 600;
   color: #333333;
   margin-bottom: 24rpx;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.view-more {
+  font-size: 24rpx;
+  color: #999999;
 }
